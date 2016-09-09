@@ -1,0 +1,16 @@
+---
+
+- name: install VM
+  hosts: vm_host
+  remote_user: root
+
+  roles:
+    - install-vm
+
+- name: install apache
+  hosts: apache_vm  
+  remote_user: vagrant
+  #connection: local
+
+  roles:
+    - install-apache
