@@ -2,6 +2,7 @@
 
 - name: install VM
   hosts: vm_host
+  connection: local
   remote_user: root
 
   roles:

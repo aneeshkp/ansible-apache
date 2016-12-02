@@ -1,6 +1,8 @@
 ---
  - name: install vagrant
-   yum: name=vagrant state=present
+   action: "{{ ansible_pkg_mgr }} name=vagrant state=present"
+   become: yes
  - name: install libvirt plugin
    command: vagrant plugin install vagrant-libvirt
+   become: yes
 
